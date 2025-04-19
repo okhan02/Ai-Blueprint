@@ -1,0 +1,20 @@
+.sidebar-wrapper {
+  --sidebar-width: var(--sidebar-width-value, 16rem);
+  --sidebar-width-icon: var(--sidebar-width-icon-value, 3rem);
+}
+
+.sidebar-mobile {
+  --sidebar-width: var(--sidebar-width-mobile-value, 18rem);
+}
+
+.sidebar-skeleton {
+  max-width: var(--skeleton-width-value, 70%);
+}
+
+/* Add a class for the sidebar container */
+.sidebar-container {
+  --sidebar-width-value: var(--sidebar-width-value, 16rem);
+  --sidebar-width-icon-value: var(--sidebar-width-icon-value, 3rem);
+  --sidebar-width-mobile-value: var(--sidebar-width-mobile-value, 18rem);
+  --skeleton-width-value: var(--skeleton-width-value, 70%);
+}

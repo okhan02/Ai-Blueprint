@@ -1,0 +1,44 @@
+
+/* Animation utility classes */
+.animate-heading-fade-in {
+  animation: heading-fade-in-zoom 1.5s ease-out forwards;
+}
+
+.animate-fade-in-1 {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.animate-fade-in-2 {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.glow-orb {
+  @apply rounded-full bg-gradient-to-br from-neon-purple/30 to-neon-cyan/10 absolute z-[-1] animate-glow-pulse;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  filter: blur(40px);
+}
+
+.robot-container {
+  @apply relative z-10;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+#typing-title {
+  position: relative;
+}
+
+#typing-title::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  animation: blink 1s step-end infinite;
+}

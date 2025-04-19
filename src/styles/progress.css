@@ -1,0 +1,3 @@
+.progress-indicator {
+  transform: translateX(var(--progress-value, 0%));
+}

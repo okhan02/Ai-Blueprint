@@ -1,0 +1,104 @@
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 76% 48%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-deep-space-black text-foreground font-sans antialiased;
+  }
+
+  /* Custom Blueprint Components */
+  .blueprint-card {
+    @apply bg-blueprint-medium bg-opacity-70 backdrop-blur-sm border border-blueprint-light rounded-lg p-6 shadow-lg;
+  }
+
+  .blueprint-terminal {
+    @apply font-mono text-green-400 bg-black bg-opacity-70 p-4 rounded-md border border-green-900;
+  }
+
+  .terminal-prompt:before {
+    content: '> ';
+    @apply text-green-500;
+  }
+
+  .blueprint-heading {
+    @apply font-bold text-transparent bg-clip-text bg-tech-gradient;
+  }
+
+  .blueprint-button {
+    @apply px-6 py-3 rounded-md text-white font-medium 
+           bg-gradient-to-r from-neon-purple to-blueprint-highlight
+           hover:opacity-90 transition-all duration-300
+           border border-white/10;
+  }
+  
+  .typing-container {
+    @apply inline-block;
+  }
+  
+  .typing-text {
+    @apply border-r-2 border-white overflow-hidden whitespace-nowrap animate-typing;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  .typing-cursor {
+    @apply border-r-2 border-white animate-blink;
+  }
+
+  .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-exo2 {
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-oswald {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  /* Spline viewer styles */
+  spline-viewer {
+    @apply w-full h-full;
+    display: block;
+  }
+}
